@@ -1,0 +1,6 @@
+{
+  "itemGroup.sandbox" : "SandboxMod",
+  "item.sandbox.sandwich": "Sandwich",
+
+  "block.sandbox.sandbox_block" : "Sandbox Block"
+}
