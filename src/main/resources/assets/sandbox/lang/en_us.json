@@ -2,5 +2,7 @@
   "itemGroup.sandbox" : "SandboxMod",
   "item.sandbox.sandwich": "Sandwich",
 
+  "item.sandbox.sandbox_hammer": "Sandbox Hammer",
+
   "block.sandbox.sandbox_block" : "Sandbox Block"
 }
