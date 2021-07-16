@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "sandbox:sandbox_block",
+    "minecraft:bedrock"
+  ]
+}

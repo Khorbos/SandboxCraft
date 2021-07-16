@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 
 public class SandboxBlock extends Block {
     public SandboxBlock() {
-        super(BlockProperties.FURNACE_PROPERTIES);
+        super(BlockProperties.DEFAULT_PROPERTIES);
         this.setRegistryName("sandbox_block");
     }
 

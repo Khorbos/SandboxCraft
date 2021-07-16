@@ -23,7 +23,7 @@ public class HammerItem extends PickaxeItem {
                         for(int z1 = -1; z1 < 2; z1++) {
                             if(world.getBlockState(pos.add(x1, 0, z1)).getBlockHardness(world, pos) >= 0.0F) {
                                 world.getBlockState(pos.add(x1, 0, z1)).canHarvestBlock(world, pos, (PlayerEntity)living);
-                                world.setBlockState(pos.add(x1, 0, z1), state.getBlockState());
+                                world.setBlockState(pos.add(x1, 0, z1), living.getBlockState());
                             }
                         }
                     }
@@ -33,7 +33,7 @@ public class HammerItem extends PickaxeItem {
                         for(int z1 = -1; z1 < 2; z1++) {
                             if(world.getBlockState(pos.add(0, y1, z1)).getBlockHardness(world, pos) >= 0.0F) {
                                 world.getBlockState(pos.add(0, y1, z1)).canHarvestBlock(world, pos, (PlayerEntity)living);
-                                world.setBlockState(pos.add(0, y1, z1), state.getBlockState());
+                                world.setBlockState(pos.add(0, y1, z1), living.getBlockState());
                             }
                         }
                     }
@@ -43,7 +43,7 @@ public class HammerItem extends PickaxeItem {
                         for(int y1 = -1; y1 < 2; y1++){
                             if(world.getBlockState(pos.add(x1, y1,0)).getBlockHardness(world, pos) >= 0.0F){
                                 world.getBlockState(pos.add(x1, y1,0)).canHarvestBlock(world, pos, (PlayerEntity)living);
-                                world.setBlockState(pos.add(x1, y1,0), state.getBlockState());
+                                world.setBlockState(pos.add(x1, y1,0), living.getBlockState());
                             }
                         }
                     }
