@@ -18,7 +18,7 @@ public class Sandbox
     public static final String ID = "sandbox";
     public static final MainItemGroup itemGroup = new MainItemGroup();
     public static Sandbox instance;
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public Sandbox() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
