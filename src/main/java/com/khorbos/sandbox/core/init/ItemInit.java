@@ -18,11 +18,16 @@ public class ItemInit {
     public static final SandwichItem sandwich = new SandwichItem();
     public static final HammerItem sandbox_hammer = null;
     public static final Item special_item = null;
+    public static final Item copper_ingot = null;
+    public static final Item raw_copper = null;
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event){
         event.getRegistry().register(sandwich);
         event.getRegistry().register(new HammerItem(ModItemTier.EMERALD, 2, 2.0F, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("sandbox_hammer"));
+
+        event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("copper_ingot"));
+        event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("raw_copper"));
 
         event.getRegistry().register(new SpecialItem().setRegistryName("special_item"));
     }

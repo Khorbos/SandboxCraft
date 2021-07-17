@@ -1,8 +1,12 @@
 {
   "itemGroup.sandbox" : "SandboxMod",
   "item.sandbox.sandwich": "Sandwich",
+  "item.sandbox.copper_ingot": "Copper Ingot",
+  "item.sandbox.raw_copper": "Raw Copper",
 
   "item.sandbox.sandbox_hammer": "Sandbox Hammer",
 
-  "block.sandbox.sandbox_block" : "Sandbox Block"
+  "block.sandbox.sandbox_block" : "Sandbox Block",
+  "block.sandbox.copper_block" : "Block of Copper",
+  "block.sandbox.copper_ore" : "Copper Ore"
 }

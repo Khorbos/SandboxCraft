@@ -10,10 +10,10 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Sandbox.ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class TestBreakBlockEvents {
-    @SubscribeEvent
-    public static void testBreakBlockEvent(LivingDestroyBlockEvent event){
-        Sandbox.LOGGER.info("testDigEvent fired");
-        LivingEntity livingEntity = event.getEntityLiving();
-        livingEntity.addPotionEffect(new EffectInstance(Effects.HASTE, 120, 2));
-    }
+//    @SubscribeEvent
+//    public static void testBreakBlockEvent(LivingDestroyBlockEvent event){
+//        Sandbox.LOGGER.info("testDigEvent fired");
+//        LivingEntity livingEntity = event.getEntityLiving();
+//        livingEntity.addPotionEffect(new EffectInstance(Effects.HASTE, 120, 2));
+//    }
 }

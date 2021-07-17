@@ -1,9 +1,11 @@
 package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
+import com.khorbos.sandbox.common.blocks.CopperOreBlock;
 import com.khorbos.sandbox.common.blocks.SandboxBlock;
 import com.khorbos.sandbox.core.util.BlockProperties;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.SandBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,14 +19,17 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = Sandbox.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BlockInit {
     public static final SandboxBlock sandbox_block = new SandboxBlock();
+    public static final CopperOreBlock copper_ore = new CopperOreBlock();
 
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event){
         event.getRegistry().register(sandbox_block);
+        event.getRegistry().register(copper_ore);
     }
 
     @SubscribeEvent
     public static void registerBlocksItem(final RegistryEvent.Register<Item> event){
         event.getRegistry().register(sandbox_block.asBlockItem().setRegistryName("sandbox_block"));
+        event.getRegistry().register(copper_ore.asBlockItem().setRegistryName("copper_ore"));
     }
 }
