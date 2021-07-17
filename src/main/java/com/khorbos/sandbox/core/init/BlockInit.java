@@ -1,6 +1,7 @@
 package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
+import com.khorbos.sandbox.common.blocks.CopperBlock;
 import com.khorbos.sandbox.common.blocks.CopperOreBlock;
 import com.khorbos.sandbox.common.blocks.SandboxBlock;
 import com.khorbos.sandbox.common.blocks.SpecialBlock;
@@ -25,6 +26,8 @@ import net.minecraftforge.registries.ObjectHolder;
 public class BlockInit {
     public static final SandboxBlock sandbox_block = new SandboxBlock();
     public static final CopperOreBlock copper_ore = new CopperOreBlock();
+    public static final CopperBlock copper_block = new CopperBlock();
+
     public static final Block special_block = new SpecialBlock(Block.Properties.create(Material.SAND)
             .hardnessAndResistance(2F,10F)
             .harvestLevel(5)
@@ -39,6 +42,7 @@ public class BlockInit {
     public static void registerBlocks(final RegistryEvent.Register<Block> event){
         event.getRegistry().register(sandbox_block);
         event.getRegistry().register(copper_ore);
+        event.getRegistry().register(copper_block);
         event.getRegistry().register(special_block);
     }
 
@@ -46,6 +50,7 @@ public class BlockInit {
     public static void registerBlocksItem(final RegistryEvent.Register<Item> event){
         event.getRegistry().register(sandbox_block.asBlockItem().setRegistryName("sandbox_block"));
         event.getRegistry().register(copper_ore.asBlockItem().setRegistryName("copper_ore"));
+        event.getRegistry().register(copper_block.asBlockItem().setRegistryName("copper_block"));
 
         event.getRegistry().register(new BlockItem(special_block, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("special_block"));
     }
