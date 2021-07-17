@@ -2,11 +2,14 @@ package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
 import com.khorbos.sandbox.common.items.SpecialItem;
+import com.khorbos.sandbox.common.items.armor.EmeraldBoots;
 import com.khorbos.sandbox.common.items.food.SandwichItem;
 import com.khorbos.sandbox.common.items.tools.HammerItem;
+import com.khorbos.sandbox.core.util.ModArmorMaterial;
 import com.khorbos.sandbox.core.util.ModItemTier;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -20,6 +23,7 @@ public class ItemInit {
     public static final Item special_item = null;
     public static final Item copper_ingot = null;
     public static final Item raw_copper = null;
+    public static final Item emerald_boots = null;
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event){
@@ -28,6 +32,8 @@ public class ItemInit {
 
         event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("copper_ingot"));
         event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("raw_copper"));
+
+        event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("emerald_boots"));
 
         event.getRegistry().register(new SpecialItem().setRegistryName("special_item"));
     }
