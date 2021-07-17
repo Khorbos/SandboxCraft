@@ -8,5 +8,6 @@
 
   "block.sandbox.sandbox_block" : "Sandbox Block",
   "block.sandbox.copper_block" : "Block of Copper",
-  "block.sandbox.copper_ore" : "Copper Ore"
+  "block.sandbox.copper_ore" : "Copper Ore",
+  "block.sandbox.special_block" : "Special Block"
 }

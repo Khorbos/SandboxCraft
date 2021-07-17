@@ -14,10 +14,8 @@ public class BlockProperties {
             .sound(SoundType.METAL)
             .lightValue(13);
 
-    public static final Block.Properties DEFAULT_PROPERTIES = Block.Properties
+    public static final Block.Properties STONE_PROPERTIES = Block.Properties
             .create(Material.ROCK)
-            .hardnessAndResistance(5.0F)
-            .harvestLevel(0)
-            .harvestTool(ToolType.PICKAXE)
             .sound(SoundType.STONE);
+
 }

@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": {"model": "sandbox:block/special_block"},
+		"facing=south": {"model": "sandbox:block/special_block", "y":  180},
+		"facing=west": {"model": "sandbox:block/special_block", "y": 270},
+		"facing=east": {"model": "sandbox:block/special_block", "y":  90}
+	}
+}
