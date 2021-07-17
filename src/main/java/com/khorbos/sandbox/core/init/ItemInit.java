@@ -1,8 +1,8 @@
 package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
+import com.khorbos.sandbox.common.items.ThuoniumItem;
 import com.khorbos.sandbox.common.items.SpecialItem;
-import com.khorbos.sandbox.common.items.armor.EmeraldBoots;
 import com.khorbos.sandbox.common.items.food.SandwichItem;
 import com.khorbos.sandbox.common.items.tools.HammerItem;
 import com.khorbos.sandbox.core.util.ModArmorMaterial;
@@ -24,6 +24,7 @@ public class ItemInit {
     public static final Item copper_ingot = null;
     public static final Item raw_copper = null;
     public static final Item emerald_boots = null;
+    public static final Item thuonium = new ThuoniumItem();
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event){
@@ -34,8 +35,9 @@ public class ItemInit {
         event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("raw_copper"));
 
         event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("emerald_boots"));
-
         event.getRegistry().register(new SpecialItem().setRegistryName("special_item"));
+
+        event.getRegistry().register(thuonium);
     }
 
 
