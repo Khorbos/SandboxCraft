@@ -1,44 +1,25 @@
 package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
-import com.khorbos.sandbox.common.items.ThuoniumItem;
 import com.khorbos.sandbox.common.items.SpecialItem;
+import com.khorbos.sandbox.common.items.ThuoniumItem;
+import com.khorbos.sandbox.common.items.armor.EmeraldBoots;
 import com.khorbos.sandbox.common.items.food.SandwichItem;
-import com.khorbos.sandbox.common.items.tools.HammerItem;
-import com.khorbos.sandbox.core.util.ModArmorMaterial;
-import com.khorbos.sandbox.core.util.ModItemTier;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
+import com.khorbos.sandbox.common.items.tools.SandboxHammer;
+import com.khorbos.sandbox.core.util.ItemProperties;
 import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
-@ObjectHolder(Sandbox.ID)
-@Mod.EventBusSubscriber(modid = Sandbox.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ItemInit {
-    public static final SandwichItem sandwich = new SandwichItem();
-    public static final HammerItem sandbox_hammer = null;
-    public static final Item special_item = null;
-    public static final Item copper_ingot = null;
-    public static final Item raw_copper = null;
-    public static final Item emerald_boots = null;
-    public static final Item thuonium = new ThuoniumItem();
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Sandbox.ID);
 
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event){
-        event.getRegistry().register(sandwich);
-        event.getRegistry().register(new HammerItem(ModItemTier.EMERALD, 2, 2.0F, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("sandbox_hammer"));
-
-        event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("copper_ingot"));
-        event.getRegistry().register(new Item(new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("raw_copper"));
-
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("emerald_boots"));
-        event.getRegistry().register(new SpecialItem().setRegistryName("special_item"));
-
-        event.getRegistry().register(thuonium);
-    }
-
-
+    public static final RegistryObject<SandwichItem> sandwich = ITEMS.register("sandwich", () -> new SandwichItem());
+    public static final RegistryObject<SandboxHammer> sandbox_hammer = ITEMS.register("sandbox_hammer", () -> new SandboxHammer());
+    public static final RegistryObject<SpecialItem> special_item = ITEMS.register("special_item", () -> new SpecialItem());
+    public static final RegistryObject<Item> copper_ingot = ITEMS.register("copper_ingot", () -> new Item(ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<Item> raw_copper = ITEMS.register("raw_copper", () -> new Item(ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<EmeraldBoots> emerald_boots = ITEMS.register("emerald_boots", () -> new EmeraldBoots());
+    public static final RegistryObject<ThuoniumItem> thuonium = ITEMS.register("thuonium", () -> new ThuoniumItem());
 }

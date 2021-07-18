@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 public class ThuoniumItem extends Item {
     public ThuoniumItem() {
         super(new Item.Properties().group(Sandbox.itemGroup));
-        this.setRegistryName("thuonium");
     }
 
     @Override

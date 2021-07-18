@@ -12,6 +12,5 @@ public class SandwichItem extends Item {
                 .group(Sandbox.itemGroup)
                 .food(new Food.Builder().hunger(10).saturation(1.2F).effect(new EffectInstance(Effects.ABSORPTION, 6000, 1), 1).build())
         );
-        this.setRegistryName("sandwich");
     }
 }

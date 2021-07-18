@@ -1,4 +1,4 @@
-package com.khorbos.sandbox.core.util;
+package com.khorbos.sandbox.core.util.enums;
 
 import com.khorbos.sandbox.Sandbox;
 import com.khorbos.sandbox.core.init.ItemInit;
@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
     EMERALD(Sandbox.ID + ":emerald", 69, new int[]{7, 9, 11, 7}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F, () -> {
-        return Ingredient.fromItems(ItemInit.emerald_boots);
+        return Ingredient.fromItems(ItemInit.emerald_boots.get());
     });
 
     private String nameIn;

@@ -1,4 +1,4 @@
-package com.khorbos.sandbox.core.util;
+package com.khorbos.sandbox.core.util.enums;
 
 import com.khorbos.sandbox.core.init.ItemInit;
 import net.minecraft.item.IItemTier;
@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
     EMERALD(4, 2402, 10F, 4.0F, 10, () -> {
-        return Ingredient.fromItems(ItemInit.sandbox_hammer);
+        return Ingredient.fromItems(ItemInit.sandbox_hammer.get());
     });
 
     private final int harvestLevel;

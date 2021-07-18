@@ -11,6 +11,6 @@ public class MainItemGroup extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(BlockInit.sandbox_block);
+        return new ItemStack(BlockInit.sandbox_block.get());
     }
 }

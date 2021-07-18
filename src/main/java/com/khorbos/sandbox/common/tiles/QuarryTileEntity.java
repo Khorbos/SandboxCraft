@@ -1,6 +1,6 @@
 package com.khorbos.sandbox.common.tiles;
 
-import com.khorbos.sandbox.core.util.ModTileEntityTypes;
+import com.khorbos.sandbox.core.init.TileEntityTypesInit;
 import com.khorbos.sandbox.core.util.helpers.NBTHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,7 +23,7 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity 
     }
 
     public QuarryTileEntity() {
-        this(ModTileEntityTypes.QUARRY.get());
+        this(TileEntityTypesInit.QUARRY.get());
     }
 
     @Override

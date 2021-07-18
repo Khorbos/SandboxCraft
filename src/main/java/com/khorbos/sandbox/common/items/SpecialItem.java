@@ -47,7 +47,7 @@ public class SpecialItem extends Item {
 
     @Override
     public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity) {
-        entity.getEntityWorld().setBlockState(entity.getPosition().down(), BlockInit.sandbox_block.getDefaultState());
+        entity.getEntityWorld().setBlockState(entity.getPosition().down(), BlockInit.sandbox_block.get().getDefaultState());
         return super.onEntityItemUpdate(stack, entity);
     }
 }

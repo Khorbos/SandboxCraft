@@ -3,6 +3,8 @@ package com.khorbos.sandbox.common.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
@@ -21,6 +23,7 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.ToolType;
 
 import java.util.stream.Stream;
 
@@ -51,8 +54,16 @@ public class SpecialBlock extends Block {
             Block.makeCuboidShape(8, 11, 11, 9, 12, 12)
     ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
-    public SpecialBlock(Properties properties) {
-        super(properties);
+    public SpecialBlock() {
+        super(Block.Properties.create(Material.SAND)
+                .hardnessAndResistance(2F,10F)
+                .harvestLevel(5)
+                .harvestTool(ToolType.PICKAXE)
+                .sound(SoundType.SAND)
+                .lightValue(4)
+                .slipperiness(1.2F)
+                .speedFactor(0.7f)
+                .noDrops());
         this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
     }
 
