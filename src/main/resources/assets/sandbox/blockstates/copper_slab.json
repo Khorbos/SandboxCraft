@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "sandbox:block/copper_slab" },
+    "type=top": { "model": "sandbox:block/copper_slab_top" },
+    "type=double": { "model": "sandbox:block/copper_block" }
+  }
+}

@@ -15,11 +15,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Sandbox.ID);
 
-    public static final RegistryObject<SandwichItem> sandwich = ITEMS.register("sandwich", () -> new SandwichItem());
-    public static final RegistryObject<SandboxHammer> sandbox_hammer = ITEMS.register("sandbox_hammer", () -> new SandboxHammer());
-    public static final RegistryObject<SpecialItem> special_item = ITEMS.register("special_item", () -> new SpecialItem());
-    public static final RegistryObject<Item> copper_ingot = ITEMS.register("copper_ingot", () -> new Item(ItemProperties.BASIC_PROPERTIES));
-    public static final RegistryObject<Item> raw_copper = ITEMS.register("raw_copper", () -> new Item(ItemProperties.BASIC_PROPERTIES));
-    public static final RegistryObject<EmeraldBoots> emerald_boots = ITEMS.register("emerald_boots", () -> new EmeraldBoots());
-    public static final RegistryObject<ThuoniumItem> thuonium = ITEMS.register("thuonium", () -> new ThuoniumItem());
+    public static final RegistryObject<SandwichItem> SANDWICH = ITEMS.register("sandwich", () -> new SandwichItem());
+    public static final RegistryObject<SandboxHammer> SANDBOX_HAMMER = ITEMS.register("sandbox_hammer", () -> new SandboxHammer());
+    public static final RegistryObject<SpecialItem> SPECIAL_ITEM = ITEMS.register("special_item", () -> new SpecialItem());
+    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<Item> RAW_COPPER = ITEMS.register("raw_copper", () -> new Item(ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<EmeraldBoots> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new EmeraldBoots());
+    public static final RegistryObject<ThuoniumItem> THUONIUM = ITEMS.register("thuonium", () -> new ThuoniumItem());
 }

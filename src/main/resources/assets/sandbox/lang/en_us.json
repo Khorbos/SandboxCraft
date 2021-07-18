@@ -1,5 +1,6 @@
 {
   "itemGroup.sandbox" : "SandboxMod",
+
   "item.sandbox.sandwich": "Sandwich",
   "item.sandbox.copper_ingot": "Copper Ingot",
   "item.sandbox.raw_copper": "Raw Copper",
@@ -11,5 +12,14 @@
   "block.sandbox.sandbox_block" : "Sandbox Block",
   "block.sandbox.copper_block" : "Block of Copper",
   "block.sandbox.copper_ore" : "Copper Ore",
-  "block.sandbox.special_block" : "Special Block"
+  "block.sandbox.special_block" : "Special Block",
+
+  "block.sandbox.copper_stairs" : "Copper Stairs",
+  "block.sandbox.copper_slab" : "Copper Slab",
+  "block.sandbox.copper_fence" : "Copper Fence",
+  "block.sandbox.copper_wall" : "Copper Wall",
+  "block.sandbox.copper_button" : "Copper Button",
+  "block.sandbox.copper_pressure_plate" : "Copper Pressure plate"
+
+
 }

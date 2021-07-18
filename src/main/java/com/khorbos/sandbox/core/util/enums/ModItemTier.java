@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public enum ModItemTier implements IItemTier {
     EMERALD(4, 2402, 10F, 4.0F, 10, () -> {
-        return Ingredient.fromItems(ItemInit.sandbox_hammer.get());
+        return Ingredient.fromItems(ItemInit.SANDBOX_HAMMER.get());
     });
 
     private final int harvestLevel;

@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
     EMERALD(Sandbox.ID + ":emerald", 69, new int[]{7, 9, 11, 7}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F, () -> {
-        return Ingredient.fromItems(ItemInit.emerald_boots.get());
+        return Ingredient.fromItems(ItemInit.EMERALD_BOOTS.get());
     });
 
     private String nameIn;

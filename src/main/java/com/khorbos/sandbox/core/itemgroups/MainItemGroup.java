@@ -6,11 +6,11 @@ import net.minecraft.item.ItemStack;
 
 public class MainItemGroup extends ItemGroup {
     public MainItemGroup() {
-        super(ItemGroup.GROUPS.length, "Sandbox Mod");
+        super(ItemGroup.GROUPS.length, "sandboxmod");
     }
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(BlockInit.sandbox_block.get());
+        return new ItemStack(BlockInit.SANDBOX_BLOCK.get());
     }
 }
