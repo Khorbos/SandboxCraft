@@ -1,10 +1,7 @@
 package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
-import com.khorbos.sandbox.common.blocks.CopperBlock;
-import com.khorbos.sandbox.common.blocks.CopperOreBlock;
-import com.khorbos.sandbox.common.blocks.SandboxBlock;
-import com.khorbos.sandbox.common.blocks.SpecialBlock;
+import com.khorbos.sandbox.common.blocks.*;
 import com.khorbos.sandbox.common.items.tools.HammerItem;
 import com.khorbos.sandbox.core.util.BlockProperties;
 import net.minecraft.block.Block;
@@ -38,12 +35,15 @@ public class BlockInit {
             .speedFactor(0.7f)
             .noDrops()).setRegistryName("special_block");
 
+    public static final QuarryBlock quarry = new QuarryBlock();
+
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event){
         event.getRegistry().register(sandbox_block);
         event.getRegistry().register(copper_ore);
         event.getRegistry().register(copper_block);
         event.getRegistry().register(special_block);
+        event.getRegistry().register(quarry);
     }
 
     @SubscribeEvent
@@ -53,5 +53,6 @@ public class BlockInit {
         event.getRegistry().register(copper_block.asBlockItem().setRegistryName("copper_block"));
 
         event.getRegistry().register(new BlockItem(special_block, new Item.Properties().group(Sandbox.itemGroup)).setRegistryName("special_block"));
+        event.getRegistry().register(quarry.asBlockItem().setRegistryName("quarry"));
     }
 }

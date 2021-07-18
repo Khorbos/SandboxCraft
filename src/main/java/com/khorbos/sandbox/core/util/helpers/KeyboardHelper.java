@@ -1,4 +1,4 @@
-package com.khorbos.sandbox.core.util;
+package com.khorbos.sandbox.core.util.helpers;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.InputMappings;

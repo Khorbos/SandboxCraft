@@ -2,11 +2,9 @@ package com.khorbos.sandbox.common.items;
 
 import com.khorbos.sandbox.Sandbox;
 import com.khorbos.sandbox.core.init.BlockInit;
-import com.khorbos.sandbox.core.util.KeyboardHelper;
+import com.khorbos.sandbox.core.util.helpers.KeyboardHelper;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

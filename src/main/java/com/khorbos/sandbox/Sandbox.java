@@ -2,6 +2,7 @@ package com.khorbos.sandbox;
 
 import com.khorbos.sandbox.common.world.gen.SandboxOreGen;
 import com.khorbos.sandbox.core.itemgroups.MainItemGroup;
+import com.khorbos.sandbox.core.util.ModTileEntityTypes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,6 +28,8 @@ public class Sandbox
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
