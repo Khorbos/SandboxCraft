@@ -1,12 +1,14 @@
 package com.khorbos.sandbox;
 
 import com.khorbos.sandbox.common.world.gen.SandboxOreGen;
+import com.khorbos.sandbox.core.init.BiomeInit;
 import com.khorbos.sandbox.core.init.BlockInit;
 import com.khorbos.sandbox.core.init.ItemInit;
 import com.khorbos.sandbox.core.itemgroups.MainItemGroup;
 import com.khorbos.sandbox.core.init.TileEntityTypesInit;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -39,6 +41,7 @@ public class Sandbox
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         TileEntityTypesInit.TILE_ENTITY_TYPES.register(modEventBus);
+        BiomeInit.BIOMES.register(modEventBus);
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
@@ -55,6 +58,12 @@ public class Sandbox
         });
 
         LOGGER.debug("SandboxMod debug : Registered BlockItems");
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event){
+        LOGGER.debug("SandboxMod debug : Registered biomes");
+        BiomeInit.registerBiomes();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
