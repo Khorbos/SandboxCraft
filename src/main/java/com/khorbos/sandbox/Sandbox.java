@@ -24,7 +24,8 @@ public class Sandbox
     public static final MainItemGroup itemGroup = new MainItemGroup();
     public static Sandbox instance;
     public static final Logger LOGGER = LogManager.getLogger();
-    public static final ResourceLocation MINING_DIM = new ResourceLocation(ID, "mining");
+    public static final ResourceLocation EXAMPLE_DIM_TYPE = new ResourceLocation(ID, "example");
+    public static final ResourceLocation MINING_DIM_TYPE = new ResourceLocation(ID, "mining");
 
     public Sandbox() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -35,7 +36,7 @@ public class Sandbox
         BlockInit.BLOCKS.register(modEventBus);
         TileEntityTypesInit.TILE_ENTITY_TYPES.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
-        DimensionInit.DIMENSIONS.register(modEventBus);
+        DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

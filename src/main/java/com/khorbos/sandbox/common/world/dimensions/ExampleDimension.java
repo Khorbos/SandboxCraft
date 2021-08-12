@@ -1,5 +1,4 @@
 package com.khorbos.sandbox.common.world.dimensions;
-
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -9,14 +8,17 @@ import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.ChunkGenerator;
 
-public class MiningWorldDimension extends Dimension {
-    public MiningWorldDimension(World world, DimensionType type) {
+public class ExampleDimension extends Dimension {
+
+    public ExampleDimension(World world, DimensionType type) {
         super(world, type, 0.0f);
     }
 
     @Override
     public ChunkGenerator<?> createChunkGenerator() {
-        return new MiningWorldChunkGenerator(world, new MiningWorldBiomeProvider(new MiningWorldBiomeProviderSettings(this.world.getWorldInfo())), new MiningWorldGenSettings());
+        return new ExampleChunkGenerator(world,
+                new ExampleBiomeProvider(new ExampleBiomeProviderSettings(this.world.getWorldInfo())),
+                new ExampleGenSettings());
     }
 
     @Override

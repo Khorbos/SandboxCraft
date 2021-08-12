@@ -1,23 +1,25 @@
 package com.khorbos.sandbox.common.world.dimensions;
 
-import com.google.common.collect.ImmutableSet;
-import com.khorbos.sandbox.core.init.BiomeInit;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
-import net.minecraft.world.biome.provider.BiomeProvider;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-public class MiningWorldProvider extends BiomeProvider {
-    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.MINING_BIOME.get(), Biomes.PLAINS);
+import com.google.common.collect.ImmutableSet;
+import com.khorbos.sandbox.core.init.BiomeInit;
+
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
+import net.minecraft.world.biome.provider.BiomeProvider;
+
+public class ExampleBiomeProvider extends BiomeProvider {
+
+    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.CHAOTIC_BIOME.get(), Biomes.BEACH);
     private Random rand;
     private final double biomeSize = 16.0D;
     private VoronoiGenerator biomeNoise;
 
-    public MiningWorldProvider(MiningWorldProviderSettings settings) {
+    public ExampleBiomeProvider(ExampleBiomeProviderSettings settings) {
         super(biomeList);
         rand = new Random();
         this.biomeNoise = new VoronoiGenerator();

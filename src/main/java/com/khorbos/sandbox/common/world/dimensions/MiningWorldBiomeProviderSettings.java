@@ -4,17 +4,17 @@ import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.provider.IBiomeProviderSettings;
 import net.minecraft.world.storage.WorldInfo;
 
-public class MiningWorldProviderSettings implements IBiomeProviderSettings {
+public class MiningWorldBiomeProviderSettings implements IBiomeProviderSettings {
     private final long seed;
     private final WorldType worldType;
     private MiningWorldGenSettings generatorSettings = new MiningWorldGenSettings();
 
-    public MiningWorldProviderSettings(WorldInfo info) {
+    public MiningWorldBiomeProviderSettings(WorldInfo info) {
         this.seed = info.getSeed();
         this.worldType = info.getGenerator();
     }
 
-    public MiningWorldProviderSettings setGeneratorSettings(MiningWorldGenSettings settings) {
+    public MiningWorldBiomeProviderSettings setGeneratorSettings(MiningWorldGenSettings settings) {
         this.generatorSettings = settings;
         return this;
     }

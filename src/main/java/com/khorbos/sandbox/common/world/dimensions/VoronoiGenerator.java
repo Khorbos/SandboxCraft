@@ -1,6 +1,7 @@
 package com.khorbos.sandbox.common.world.dimensions;
 
 public class VoronoiGenerator {
+
     private static final int X_NOISE_GEN = 1619;
     private static final int Y_NOISE_GEN = 31337;
     private static final int Z_NOISE_GEN = 6971;
