@@ -1,6 +1,7 @@
 package com.khorbos.sandbox.core.util;
 
 import com.khorbos.sandbox.Sandbox;
+import com.khorbos.sandbox.common.blocks.CornCrop;
 import com.khorbos.sandbox.core.init.BiomeInit;
 import com.khorbos.sandbox.core.init.BlockInit;
 import com.khorbos.sandbox.core.init.DimensionInit;
@@ -29,12 +30,13 @@ public class ForgeEventBusSubcriber {
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event){
         final IForgeRegistry<Item> registry = event.getRegistry();
-        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(Sandbox.itemGroup);
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(block.getRegistryName());
-            registry.register(blockItem);
-        });
+        BlockInit.BLOCKS.getEntries().stream().filter(block -> !(block.get() instanceof CornCrop))
+                .map(RegistryObject::get).forEach(block -> {
+                    final Item.Properties properties = new Item.Properties().group(Sandbox.itemGroup);
+                    final BlockItem blockItem = new BlockItem(block, properties);
+                    blockItem.setRegistryName(block.getRegistryName());
+                    registry.register(blockItem);
+                });
 
         Sandbox.LOGGER.debug("SandboxMod debug : Registered BlockItems");
     }

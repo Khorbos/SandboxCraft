@@ -1,0 +1,6 @@
+{
+  "parent": "sandbox:block/crop_double",
+  "textures": {
+    "crop": "sandbox:blocks/corn_crop1"
+  }
+}

@@ -36,4 +36,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> COPPER_PRESSURE_PLATE = BLOCKS.register("copper_pressure_plate",
             () -> new CopperPressurePlate(Block.Properties.from(COPPER_BLOCK.get())));
+
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCrop(Block.Properties.from(Blocks.WHEAT)));
 }

@@ -4,9 +4,11 @@ import com.khorbos.sandbox.Sandbox;
 import com.khorbos.sandbox.common.items.SpecialItem;
 import com.khorbos.sandbox.common.items.ThuoniumItem;
 import com.khorbos.sandbox.common.items.armor.EmeraldBoots;
+import com.khorbos.sandbox.common.items.food.CornItem;
 import com.khorbos.sandbox.common.items.food.SandwichItem;
 import com.khorbos.sandbox.common.items.tools.SandboxHammer;
 import com.khorbos.sandbox.core.util.ItemProperties;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,4 +24,7 @@ public class ItemInit {
     public static final RegistryObject<Item> RAW_COPPER = ITEMS.register("raw_copper", () -> new Item(ItemProperties.BASIC_PROPERTIES));
     public static final RegistryObject<EmeraldBoots> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new EmeraldBoots());
     public static final RegistryObject<ThuoniumItem> THUONIUM = ITEMS.register("thuonium", () -> new ThuoniumItem());
+
+    public static final RegistryObject<Item> CORN_SEED = ITEMS.register("corn_seed", () -> new BlockItem(BlockInit.CORN_CROP.get(), ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<CornItem> CORN = ITEMS.register("corn", () -> new CornItem());
 }

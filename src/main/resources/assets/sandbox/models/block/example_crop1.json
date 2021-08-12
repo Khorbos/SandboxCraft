@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "sandbox:blocks/example_crop1"
+  }
+}

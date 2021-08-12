@@ -19,7 +19,9 @@
   "block.sandbox.copper_fence" : "Copper Fence",
   "block.sandbox.copper_wall" : "Copper Wall",
   "block.sandbox.copper_button" : "Copper Button",
-  "block.sandbox.copper_pressure_plate" : "Copper Pressure plate"
+  "block.sandbox.copper_pressure_plate" : "Copper Pressure plate",
+
+  "block.sandbox.corn_crop" : "Corn Seeds"
 
 
 }
