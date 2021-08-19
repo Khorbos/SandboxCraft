@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": {"model": "sandbox:block/copper_log"},
+    "axis=z": {"model": "sandbox:block/copper_log", "x": 90},
+    "axis=x": {"model": "sandbox:block/copper_log", "x": 90, "y": 90}
+  }
+}

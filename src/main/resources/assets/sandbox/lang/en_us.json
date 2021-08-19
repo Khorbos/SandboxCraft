@@ -3,6 +3,7 @@
 
   "item.sandbox.sandwich": "Sandwich",
   "item.sandbox.copper_ingot": "Copper Ingot",
+  "item.sandbox.copper_nugget": "Copper Nugget",
   "item.sandbox.raw_copper": "Raw Copper",
   "item.sandbox.thuonium": "Thuonium",
 
@@ -19,7 +20,11 @@
   "block.sandbox.copper_fence" : "Copper Fence",
   "block.sandbox.copper_wall" : "Copper Wall",
   "block.sandbox.copper_button" : "Copper Button",
-  "block.sandbox.copper_pressure_plate" : "Copper Pressure plate",
+  "block.sandbox.copper_pressure_plate" : "Copper Pressure Plate",
+  "block.sandbox.copper_log" : "Copper Log",
+  "block.sandbox.copper_leaves" : "Copper Leaves",
+  "block.sandbox.copper_sapling" : "Copper Sapling",
+  "block.sandbox.copper_grass" : "Copper Grass",
 
   "block.sandbox.corn_crop" : "Corn Seeds"
 

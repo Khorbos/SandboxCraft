@@ -49,7 +49,7 @@ public class MiningWorldDimension extends Dimension {
 
     @Override
     public boolean isSurfaceWorld() {
-        return false;
+        return true;
     }
 
     @Override

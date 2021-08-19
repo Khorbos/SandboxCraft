@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "block/dirt",
+    "bottom": "block/dirt",
+    "top": "sandbox:blocks/copper_grass_block_top",
+    "side": "sandbox:blocks/copper_grass_block_side",
+    "overlay": "sandbox:blocks/copper_grass_block_side_overlay"
+  }
+}

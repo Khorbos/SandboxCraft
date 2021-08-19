@@ -2,6 +2,7 @@ package com.khorbos.sandbox.core.init;
 
 import com.khorbos.sandbox.Sandbox;
 import com.khorbos.sandbox.common.world.biomes.ChaoticBiome;
+import com.khorbos.sandbox.common.world.biomes.CopperBiome;
 import com.khorbos.sandbox.common.world.biomes.MiningBiome;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -15,14 +16,16 @@ public class BiomeInit {
 
     public static final RegistryObject<Biome> CHAOTIC_BIOME = BIOMES.register("chaotic_biome", ChaoticBiome::new);
     public static final RegistryObject<Biome> MINING_BIOME = BIOMES.register("mining_biome", MiningBiome::new);
+    public static final RegistryObject<Biome> COPPER_BIOME = BIOMES.register("copper_biome", CopperBiome::new);
 
     public static void registerBiomes(){
         registerBiome(CHAOTIC_BIOME.get(), BiomeDictionary.Type.OVERWORLD);
         registerBiome(MINING_BIOME.get(), BiomeDictionary.Type.PLAINS);
+        registerBiome(COPPER_BIOME.get(), BiomeDictionary.Type.PLAINS);
     }
 
     private static void registerBiome(Biome biome, BiomeDictionary.Type... types){
-        //BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 100));    // Make it spawn in the overworld
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 100));    // Make it spawn in the overworld
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }

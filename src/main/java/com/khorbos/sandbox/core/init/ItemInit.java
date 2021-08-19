@@ -20,8 +20,9 @@ public class ItemInit {
     public static final RegistryObject<SandwichItem> SANDWICH = ITEMS.register("sandwich", () -> new SandwichItem());
     public static final RegistryObject<SandboxHammer> SANDBOX_HAMMER = ITEMS.register("sandbox_hammer", () -> new SandboxHammer());
     public static final RegistryObject<SpecialItem> SPECIAL_ITEM = ITEMS.register("special_item", () -> new SpecialItem());
-    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(ItemProperties.BASIC_PROPERTIES));
     public static final RegistryObject<Item> RAW_COPPER = ITEMS.register("raw_copper", () -> new Item(ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", () -> new Item(ItemProperties.BASIC_PROPERTIES));
+    public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", () -> new Item(ItemProperties.BASIC_PROPERTIES));
     public static final RegistryObject<EmeraldBoots> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new EmeraldBoots());
     public static final RegistryObject<ThuoniumItem> THUONIUM = ITEMS.register("thuonium", () -> new ThuoniumItem());
 

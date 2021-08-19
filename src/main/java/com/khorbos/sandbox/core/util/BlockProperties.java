@@ -9,4 +9,8 @@ public class BlockProperties {
     public static final Block.Properties STONE_PROPERTIES = Block.Properties
             .create(Material.ROCK)
             .sound(SoundType.STONE);
+
+    public static final Block.Properties GRASS_PROPERTIES = Block.Properties
+            .create(Material.ORGANIC)
+            .sound(SoundType.GROUND);
 }

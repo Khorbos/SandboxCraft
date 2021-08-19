@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class MiningWorldBiomeProvider extends BiomeProvider {
-    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.MINING_BIOME.get(), Biomes.PLAINS);
+    private static final Set<Biome> biomeList = ImmutableSet.of(BiomeInit.MINING_BIOME.get(), BiomeInit.COPPER_BIOME.get());
     private Random rand;
     private final double biomeSize = 16.0D;
     private VoronoiGenerator biomeNoise;
